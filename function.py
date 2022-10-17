@@ -7,4 +7,4 @@ def lambda_handler(event, context):
 	with open('slack_hook.secret') as fin:
 		url = fin.read().strip()
 	response = requests.post(url, json = {"text":message})
-	return response.txt
+	return response.text
